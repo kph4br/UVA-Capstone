@@ -1,11 +1,5 @@
 """
 Download all raw data for the Virginia Reality Check capstone.
-
-Run once (with internet) from the project folder:
-    py download_data.py
-
-Saves everything into raw/ with today's date in each file name.
-The notebook reads these saved files and never calls the sources itself.
 """
 import json
 from datetime import date
@@ -13,7 +7,7 @@ from pathlib import Path
 
 import requests
 
-TODAY = date.today().isoformat()          # e.g. 2026-11-21
+TODAY = date.today().isoformat()
 RAW = Path("raw")
 RAW.mkdir(exist_ok=True)
 
@@ -41,7 +35,7 @@ def get(url):
     return response
 
 
-# 1. Torvik ratings CSV
+# Torvik ratings
 torvik = get(TORVIK_URL)
 torvik_path = RAW / f"torvik_2027_team_results_{TODAY}.csv"
 torvik_path.write_bytes(torvik.content)
@@ -51,14 +45,14 @@ print(f"   first line: {first_line[:100]}")
 if first_line.lstrip().startswith("<"):
     print("   WARNING: this looks like a web page, not a CSV. Tell Claude.")
 
-# 2. ESPN schedule JSON
+# ESPN schedule
 schedule = get(SCHEDULE_URL).json()
 schedule_path = RAW / f"espn_schedule_{TODAY}.json"
 schedule_path.write_text(json.dumps(schedule, indent=2), encoding="utf-8")
 events = schedule.get("events", [])
 print(f"Saved {schedule_path}  ({len(events)} games on the schedule)")
 
-# 3. One ESPN summary per finished game
+# One ESPN summary per finished game
 finished = [
     e for e in events
     if e["competitions"][0]["status"]["type"]["completed"]

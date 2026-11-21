@@ -13,9 +13,9 @@ Covers Virginia's first 7 games (all wins, played Nov 3 to Nov 20, 2026), using 
 
 ### Q1. How strong have Virginia's opponents been?
 
-Virginia men's basketball schedule has been mostly weak, with only two actual "tests". The average Barthag of Virginia's 7 opponents is **0.456**. That is slightly below 0.5, the rating of an average Division I team. Torvik's own strength-of-schedule figure for Virginia is **0.423**, which also puts the schedule below average. The two numbers differ because Torvik computes its strength-of-schedule figure with its own method, while mine is calculated as an average of opponent ratings.
+Virginia men's basketball schedule has been mostly weak, with only two actual "tests". The average Barthag of Virginia's 7 opponents is 0.456. That is slightly below 0.5, the rating of an average Division I team. Torvik's own strength-of-schedule figure for Virginia is 0.423, which also puts the schedule below average. The two numbers differ because Torvik computes its strength-of-schedule figure with its own method, while mine is calculated as an average of opponent ratings.
 
-Only **2 of the 7 opponents** Virginia men's basketball has faced off against rate above average:
+Only 2 of the 7 opponents Virginia men's basketball has faced off against rate above average:
 
 - **Arkansas** (0.88): Virginia won 91–72 at a neutral site.
 - **Maryland** (0.85): Virginia won 87–83 on the road.
@@ -24,7 +24,7 @@ The other five opponents range from 0.12 (Loyola Maryland) to 0.45 (Old Dominion
 
 ### Q2. Who carries Virginia?
 
-Scoring is pretty spread out rather than carried by one or two players. Over 7 games, Virginia scored **647 points**:
+Scoring is pretty spread out rather than carried by one or two players. Over 7 games, Virginia scored 647 points:
 
 - **Thijs De Ridder**: 129 points, accounting for **19.9%** of Virgina's points, and the leading scorer on UVA so far.
 - **Sam Lewis**: 121 points, 18.7%.
@@ -40,7 +40,7 @@ Thijs De Ridder is also the team leader in rebounds (54) and steals (16), so I t
 
 ## Data sources
 
-All three were most recently pulled on **2026-11-21** and saved in `raw/` with that date in the file name.
+All three were most recently pulled on 2026-11-21 and saved in `raw/` with that date in the file name.
 
 | Source | Address | Saved as |
 |---|---|---|
