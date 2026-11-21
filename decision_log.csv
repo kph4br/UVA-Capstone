@@ -1,0 +1,7 @@
+step,decision,rows_before,rows_after,rows_changed
+games,Kept only finished games (competitions[0].status.type.completed == True),31,7,24
+games,Converted start times UTC -> Eastern; 5 games moved to the previous calendar day,7,7,0
+teams,Renamed 1 ESPN opponent name(s) to match Torvik spelling,7,7,0
+teams,Opponents with no Torvik row (non-Division I): none,7,7,0
+player_games,Dropped roster rows for players who did not play (empty stats list),126,99,27
+player_games,Kept box score rows only for finished games,99,99,0
